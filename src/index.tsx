@@ -1,8 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { StrictMode } from "react";
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-const App: React.FC = () => {
-  return <div>Hello, React and TypeScript!</div>;
-};
+import App from "./app/app";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const root = createRoot(document.getElementById("root") as Element);
+
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
