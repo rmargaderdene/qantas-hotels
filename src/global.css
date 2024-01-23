@@ -1,0 +1,58 @@
+/* Global Styles */
+
+:global(body) {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  background-color: #f5f5f5;
+}
+
+:global(a) {
+  color: #007bff;
+  text-decoration: none;
+}
+
+:global(a:hover) {
+  text-decoration: underline;
+}
+
+:global(h1, h2, h3) {
+  color: #333;
+}
+
+:global(p) {
+  line-height: 1.6;
+  color: #666;
+}
+
+:global(p + p) {
+  margin-top: 1em;
+}
+
+:global(img) {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+}
+
+:global(ul, ol) {
+  margin-bottom: 1em;
+}
+
+:global(li) {
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+
+:global(input, textarea, button, select) {
+  font-size: 1em;
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+
+:global(*) {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

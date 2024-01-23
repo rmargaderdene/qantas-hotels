@@ -25,6 +25,7 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.33.2",
+    "msw": "^2.1.4",
     "prettier": "^3.2.4",
     "style-loader": "^3.3.4",
     "ts-loader": "^9.5.1",

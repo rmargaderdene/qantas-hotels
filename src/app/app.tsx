@@ -1,5 +1,8 @@
+import '../global.css'
+
 import React, { useEffect } from 'react'
 
+import { PropertyCard } from '../components'
 import styles from './app.module.css'
 
 export const App: React.FC = () => {
@@ -8,7 +11,18 @@ export const App: React.FC = () => {
     return () => {}
   }, [])
 
-  return <div className={styles.title}>Hello, React and TypeScript!</div>
+  return (
+    <div className={styles.container}>
+      <PropertyCard
+        image="image"
+        name="name"
+        location="location"
+        rating="rating"
+        inclusions="inclusions"
+        priceForNight="111"
+      />
+    </div>
+  )
 }
 
 export default App

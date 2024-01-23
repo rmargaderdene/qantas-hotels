@@ -1,9 +1,4 @@
-:global body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.title {
-  font-size: 1.5rem;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }

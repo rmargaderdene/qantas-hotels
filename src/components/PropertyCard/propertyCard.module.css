@@ -1,0 +1,13 @@
+.card {
+  display: flex;
+  width: 500px;
+  max-width: 500px;
+  border-radius: 10px;
+  background-color: aqua;
+  padding: 10px 20px;
+  margin: 10px 3px;
+}
+
+.card > * {
+  margin: 5px;
+}
