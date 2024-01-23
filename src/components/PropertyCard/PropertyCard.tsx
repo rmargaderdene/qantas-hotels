@@ -10,14 +10,7 @@ export type Props = {
   inclusions: string
   priceForNight: string
 }
-export const PropertyCard: React.FC<Props> = ({
-  image,
-  name,
-  location,
-  rating,
-  inclusions,
-  priceForNight,
-}) => {
+export const PropertyCard: React.FC<Props> = ({ image, name, location, rating, inclusions, priceForNight }) => {
   return (
     <div className={styles.card}>
       <div>{image}</div>

@@ -13,14 +13,7 @@ export const App: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <PropertyCard
-        image="image"
-        name="name"
-        location="location"
-        rating="rating"
-        inclusions="inclusions"
-        priceForNight="111"
-      />
+      <PropertyCard image="image" name="name" location="location" rating="rating" inclusions="inclusions" priceForNight="111" />
     </div>
   )
 }

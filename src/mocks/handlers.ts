@@ -8,7 +8,7 @@ export const handlers = [
       location: 'location',
       rating: 'rating',
       inclusions: 'inclusions',
-      priceForNight: '111',
+      priceForNight: '111'
     })
-  }),
+  })
 ]

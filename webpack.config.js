@@ -4,17 +4,17 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     filename: './dist/bundle.js',
-    path: path.resolve(__dirname, ''),
+    path: path.resolve(__dirname, '')
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
@@ -24,11 +24,11 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              modules: true,
-            },
-          },
-        ],
-      },
-    ],
-  },
+              modules: true
+            }
+          }
+        ]
+      }
+    ]
+  }
 }

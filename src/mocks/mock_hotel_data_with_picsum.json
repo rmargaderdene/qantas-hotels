@@ -95,12 +95,7 @@
       "value": 1.5,
       "type": "star"
     },
-    "inclusions": [
-      "Gym Access",
-      "Free WiFi",
-      "Airport Shuttle",
-      "Breakfast Included"
-    ],
+    "inclusions": ["Gym Access", "Free WiFi", "Airport Shuttle", "Breakfast Included"],
     "price": {
       "total": {
         "amount": "299.00",
@@ -128,13 +123,7 @@
       "value": 1.5,
       "type": "star"
     },
-    "inclusions": [
-      "Airport Shuttle",
-      "Gym Access",
-      "Breakfast Included",
-      "Pool",
-      "Free WiFi"
-    ],
+    "inclusions": ["Airport Shuttle", "Gym Access", "Breakfast Included", "Pool", "Free WiFi"],
     "price": {
       "total": {
         "amount": "152.00",
@@ -246,13 +235,7 @@
       "value": 4.0,
       "type": "self"
     },
-    "inclusions": [
-      "Free WiFi",
-      "Gym Access",
-      "Pool",
-      "Airport Shuttle",
-      "Breakfast Included"
-    ],
+    "inclusions": ["Free WiFi", "Gym Access", "Pool", "Airport Shuttle", "Breakfast Included"],
     "price": {
       "total": {
         "amount": "395.00",
