@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from 'react'
 
-import styles from "./app.module.css";
+import styles from './app.module.css'
 
 export const App: React.FC = () => {
-  return <div className={styles.title}>Hello, React and TypeScript!</div>;
-};
+  useEffect(() => {
+    console.log('test')
+    return () => {}
+  }, [])
 
-export default App;
+  return <div className={styles.title}>Hello, React and TypeScript!</div>
+}
+
+export default App
