@@ -5,14 +5,20 @@ import { createRoot } from 'react-dom/client'
 import App from './app/app'
 import { worker } from './mocks/browser'
 
-if (process.env.NODE_ENV === 'development') {
-  worker.start()
+const enableMocking = async () => {
+  if (process.env.NODE_ENV !== 'development') {
+    return
+  }
+
+  return worker.start()
 }
 
-const root = createRoot(document.getElementById('root') as Element)
+enableMocking().then(() => {
+  const root = createRoot(document.getElementById('root') as Element)
 
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-)
+  root.render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  )
+})

@@ -7,7 +7,11 @@ import styles from './app.module.css'
 
 export const App: React.FC = () => {
   useEffect(() => {
-    console.log('test')
+    const fetchHotelsData = async () => {
+      const response = await fetch('https://api.qantas/hotels')
+      console.log(response)
+    }
+    fetchHotelsData()
     return () => {}
   }, [])
 
