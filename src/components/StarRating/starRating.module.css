@@ -1,0 +1,9 @@
+.starIcon {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.starIconFilled {
+  fill: yellow;
+}

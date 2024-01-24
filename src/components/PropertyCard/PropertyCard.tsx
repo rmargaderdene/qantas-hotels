@@ -1,10 +1,11 @@
 import React from 'react'
 
+import StarRating from '../StarRating/StarRating'
 import styles from './propertyCard.module.css'
 
 type RatingType = {
   value: number
-  type: string
+  type: 'star' | 'self'
 }
 type LocationType = {
   city: string
@@ -45,7 +46,7 @@ export const Inclusions: React.FC<{ inclusions: string[] }> = ({ inclusions }) =
   )
 }
 
-const PropertyCard: React.FC<PropertyCardType> = ({ heroImage, name, price, location, inclusions, sleep }) => {
+const PropertyCard: React.FC<PropertyCardType> = ({ heroImage, name, price, location, inclusions, sleep, rating }) => {
   return (
     <div className={styles.card}>
       <div className={styles.heroImage} style={{ backgroundImage: `url(${heroImage})` }} />
@@ -57,7 +58,7 @@ const PropertyCard: React.FC<PropertyCardType> = ({ heroImage, name, price, loca
           <Inclusions inclusions={inclusions} />
           <div className={styles.sleep}>{`Sleep ${sleep}`}</div>
         </div>
-        <div className={styles.rating}>rating</div>
+        {rating?.type === 'star' ? <StarRating value={rating.value} /> : <div className={styles.rating}>rating</div>}
       </div>
     </div>
   )
