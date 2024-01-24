@@ -1,5 +1,6 @@
 import React from 'react'
 
+import SelfRating from '../SelfRating/SelfRating'
 import StarRating from '../StarRating/StarRating'
 import styles from './propertyCard.module.css'
 
@@ -58,7 +59,7 @@ const PropertyCard: React.FC<PropertyCardType> = ({ heroImage, name, price, loca
           <Inclusions inclusions={inclusions} />
           <div className={styles.sleep}>{`Sleep ${sleep}`}</div>
         </div>
-        {rating?.type === 'star' ? <StarRating value={rating.value} /> : <div className={styles.rating}>rating</div>}
+        {rating?.type === 'star' ? <StarRating value={rating.value} /> : <SelfRating value={rating.value} />}
       </div>
     </div>
   )
