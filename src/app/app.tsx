@@ -1,15 +1,20 @@
 import '../global.css'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { PropertyCard } from '../components'
+import { PropertyCardList, PropertyCardType } from '../components'
 import styles from './app.module.css'
 
 export const App: React.FC = () => {
+  const [hotelsData, setHotelsData] = useState<PropertyCardType[]>([])
+
   useEffect(() => {
     const fetchHotelsData = async () => {
-      const response = await fetch('https://api.qantas/hotels')
-      console.log(response)
+      await fetch('https://api.qantas/hotels')
+        .then((response) => response.json())
+        .then((hotels) => {
+          setHotelsData(hotels)
+        })
     }
     fetchHotelsData()
     return () => {}
@@ -17,7 +22,7 @@ export const App: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <PropertyCard image="image" name="name" location="location" rating="rating" inclusions="inclusions" priceForNight="111" />
+      <PropertyCardList hotels={hotelsData} />
     </div>
   )
 }
