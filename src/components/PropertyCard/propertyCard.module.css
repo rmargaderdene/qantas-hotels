@@ -65,6 +65,8 @@
 }
 
 .price {
+  width: 100%;
+  display: inline-block;
   font-family: Helvetica, sans-serif;
   font-size: 27px;
   font-style: normal;
@@ -73,12 +75,16 @@
 }
 
 .name {
+  width: 100%;
+  display: inline-block;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
 }
 
 .location {
+  width: 100%;
+  display: inline-block;
   font-style: normal;
   font-weight: 400;
   color: gray;

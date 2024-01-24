@@ -53,11 +53,11 @@ const PropertyCard: React.FC<PropertyCardType> = ({ heroImage, name, price, loca
       <div className={styles.heroImage} style={{ backgroundImage: `url(${heroImage})` }} />
       <div className={styles.cardBody}>
         <div className={styles.info}>
-          <div className={styles.price}>{`$${price.total.amount}`}</div>
-          <div className={styles.name}>{name}</div>
-          <div className={styles.location}>{`${location.city}, ${location.country}`}</div>
+          <span className={styles.price}>{`$${price.total.amount}`}</span>
+          <span className={styles.name}>{name}</span>
+          <span className={styles.location}>{`${location.city}, ${location.country}`}</span>
           <Inclusions inclusions={inclusions} />
-          <div className={styles.sleep}>{`Sleep ${sleep}`}</div>
+          <span className={styles.sleep}>{`Sleep ${sleep}`}</span>
         </div>
         {rating?.type === 'star' ? <StarRating value={rating.value} /> : <SelfRating value={rating.value} />}
       </div>
