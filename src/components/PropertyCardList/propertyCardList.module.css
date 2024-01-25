@@ -1,7 +1,14 @@
 .cardList {
-  margin: 20px auto;
+  min-height: 700px;
+  margin: 2px auto;
   width: 90%;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@media (max-width: 900px) {
+  .cardList {
+    min-height: auto;
+  }
 }

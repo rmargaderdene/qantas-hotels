@@ -4,11 +4,11 @@ import styles from './pagination.module.css'
 
 type Props = {
   currentPage: number
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>
+  handlePageClick: (currentPage: number) => void
   maxPageNum: number
 }
 
-export const Pagination: React.FC<Props> = ({ currentPage, setCurrentPage, maxPageNum }) => {
+export const Pagination: React.FC<Props> = ({ currentPage, handlePageClick, maxPageNum }) => {
   const pages = []
   let left = currentPage - 2
   if (left <= 0) left = 1
@@ -21,7 +21,7 @@ export const Pagination: React.FC<Props> = ({ currentPage, setCurrentPage, maxPa
         key={num}
         className={num === currentPage ? [styles.round, styles.active].join(' ') : styles.round}
         onClick={() => {
-          setCurrentPage(num)
+          handlePageClick(num)
         }}>
         {num}
       </div>
@@ -30,13 +30,13 @@ export const Pagination: React.FC<Props> = ({ currentPage, setCurrentPage, maxPa
 
   const goToNextPage = () => {
     if (currentPage < maxPageNum) {
-      setCurrentPage(currentPage + 1)
+      handlePageClick(currentPage + 1)
     }
   }
 
   const goToPrevPage = () => {
     if (currentPage > 1) {
-      setCurrentPage(currentPage - 1)
+      handlePageClick(currentPage - 1)
     }
   }
 

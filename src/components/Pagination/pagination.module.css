@@ -1,8 +1,8 @@
 .pagination {
+  margin-bottom: 10px;
+  width: 90%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 
 .pagination > div {
@@ -12,7 +12,7 @@
   display: flex;
 }
 .round {
-  color: #dd4124;
+  color: #000000;
   cursor: pointer;
   font-size: 16px;
   text-align: center;
@@ -31,7 +31,7 @@
 
 .round:hover {
   text-decoration: none;
-  background: #dd4124;
+  background: lightblue;
   color: #fff;
 }
 .round:hover a {
@@ -40,10 +40,10 @@
 }
 
 .active {
-  background: #dd4124;
+  background: lightblue;
   color: #fff;
 }
 a:link {
   text-decoration: none;
-  color: #dd4124;
+  color: lightblue;
 }

@@ -5,10 +5,8 @@
 
 .appTitle {
   font-family: 'Poppins', sans-serif;
-  font-size: 37px;
   font-style: normal;
   font-weight: 400;
-  margin: 5px auto;
   text-align: center;
 }
 
@@ -17,7 +15,10 @@
 }
 
 .footer {
-  margin: 10px auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .nav {
