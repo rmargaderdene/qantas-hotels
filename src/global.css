@@ -1,7 +1,9 @@
 /* Global Styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;700&family=Oswald:wght@300;400;700&family=Poppins:wght@500;600&family=Roboto:wght@300;400;500;700&display=swap');
+
 :global(body) {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   background-color: #f5f5f5;
 }
