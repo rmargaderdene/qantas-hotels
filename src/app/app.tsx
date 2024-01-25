@@ -2,10 +2,11 @@ import '../global.css'
 
 import React, { Suspense, useEffect, useState } from 'react'
 
-import { PropertyCardList, PropertyCardType, SortMenu } from '../components'
+import { Pagination, PropertyCardList, PropertyCardType, SortMenu } from '../components'
 import styles from './app.module.css'
 
 export const App: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState(1)
   const [hotelsData, setHotelsData] = useState<PropertyCardType[] | null>(null)
 
   useEffect(() => {
@@ -33,7 +34,9 @@ export const App: React.FC = () => {
           <PropertyCardList hotels={hotelsData} />
         </Suspense>
       </main>
-      <footer className={styles.footer}>pagination</footer>
+      <footer className={styles.footer}>
+        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} maxPageNum={Number(hotelsData ? hotelsData?.length / 5 : 1)} />
+      </footer>
     </>
   )
 }
